@@ -1,0 +1,5 @@
+This project is developed using Spring Boot with Java 11.
+Embeded Mongodb is used for development purposes.
+Respository, service and controller are developed in separated packages.
+BookController is not included with authentication in order to omit admin controls.
+Bearer token is used for authentication.

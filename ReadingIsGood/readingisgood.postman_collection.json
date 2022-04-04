@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "1bab9acc-7fae-4a0e-90cc-eebe3c6dbc6c",
+		"name": "readingisgood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"darth.vader@deathstar.io\",\n    \"password\": \"empire.rocks\",\n    \"name\": \"Darth\",\n    \"surname\": \"Vader\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customerServices/operations/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customerServices",
+						"operations",
+						"signUp"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"darth.vader@deathstar.io\",\n    \"password\": \"empire.rocks\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customerServices/operations/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customerServices",
+						"operations",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"High Republic Vol. 1\",\n    \"amount\": 7,\n    \"price\": 14.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bookServices/saveBook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookServices",
+						"saveBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "placeOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXJ0aC52YWRlckBkZWF0aHN0YXIuaW8iLCJpYXQiOjE2NDkwMjM2MzUsImV4cCI6MTY0OTExMDAzNX0.aaNK6T_qSB9Z2mHQJaUIK-cCaUTq2D-zE8yeMq3AvVTmwHtlyE6t2ozZuCoFzu5I9xGjfQNGjjf6SPUUmJNdUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookName\": \"High Republic Vol. 1\",\n    \"amount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orderServices/placeOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orderServices",
+						"placeOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inquiryOrderById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXJ0aC52YWRlckBkZWF0aHN0YXIuaW8iLCJpYXQiOjE2NDkwMjM2MzUsImV4cCI6MTY0OTExMDAzNX0.aaNK6T_qSB9Z2mHQJaUIK-cCaUTq2D-zE8yeMq3AvVTmwHtlyE6t2ozZuCoFzu5I9xGjfQNGjjf6SPUUmJNdUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"624b568dc573bb1a5bb0bc5d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orderServices/inquiryOrderById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orderServices",
+						"inquiryOrderById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inquiryOrdersByDate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXJ0aC52YWRlckBkZWF0aHN0YXIuaW8iLCJpYXQiOjE2NDkwMjM2MzUsImV4cCI6MTY0OTExMDAzNX0.aaNK6T_qSB9Z2mHQJaUIK-cCaUTq2D-zE8yeMq3AvVTmwHtlyE6t2ozZuCoFzu5I9xGjfQNGjjf6SPUUmJNdUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": \"2022-04-03\",\n    \"endDate\": \"2022-04-05\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orderServices/inquiryOrdersByDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orderServices",
+						"inquiryOrdersByDate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerOrdersWithPaging",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXJ0aC52YWRlckBkZWF0aHN0YXIuaW8iLCJpYXQiOjE2NDkwMjM2MzUsImV4cCI6MTY0OTExMDAzNX0.aaNK6T_qSB9Z2mHQJaUIK-cCaUTq2D-zE8yeMq3AvVTmwHtlyE6t2ozZuCoFzu5I9xGjfQNGjjf6SPUUmJNdUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pageNum\": 0,\n    \"pageSize\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customerServices/inquiry/getCustomerOrdersWithPaging",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customerServices",
+						"inquiry",
+						"getCustomerOrdersWithPaging"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerStatistic",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYXJ0aC52YWRlckBkZWF0aHN0YXIuaW8iLCJpYXQiOjE2NDkwMjM2MzUsImV4cCI6MTY0OTExMDAzNX0.aaNK6T_qSB9Z2mHQJaUIK-cCaUTq2D-zE8yeMq3AvVTmwHtlyE6t2ozZuCoFzu5I9xGjfQNGjjf6SPUUmJNdUA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/statistic/getCustomerStatistic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"statistic",
+						"getCustomerStatistic"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
